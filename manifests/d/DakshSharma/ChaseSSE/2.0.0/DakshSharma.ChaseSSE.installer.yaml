@@ -10,12 +10,4 @@ Installers:
     Publisher: Daksh Sharma
     ProductCode: '{8B5F3D2A-1C4E-4F6B-9A8D-2E5C7F9B1A3D}_is1'
 ManifestType: installer
-ManifestVersion: 1.4.0
-    | Out-File -FilePath $installerManifestPath -Encoding utf8
-    } else {
-        (Get-Content $installerManifestPath) | ForEach-Object {
-            $_ -replace 'PackageVersion: .*', "PackageVersion: $version" `
-               -replace 'InstallerUrl: .*', "InstallerUrl: https://github.com/frypan05/chase-sse-dist/releases/download/${{ github.ref_name }}/chase-sse-setup-$version.exe" `
-               -replace 'InstallerSha256: .*', "InstallerSha256: ${{ steps.hash.outputs.sha256}}"
-        } | Set-Content $installerManifestPath
-    }
+ManifestVersion: $version

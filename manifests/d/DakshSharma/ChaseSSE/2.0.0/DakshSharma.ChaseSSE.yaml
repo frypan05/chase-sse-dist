@@ -1,9 +1,5 @@
 PackageIdentifier: DakshSharma.ChaseSSE
-PackageVersion: 2.0.0
+PackageVersion: $version
 DefaultLocale: en-US
 ManifestType: version
-ManifestVersion: 1.4.0
-  | Out-File -FilePath $versionManifestPath -Encoding utf8
-    } else {
-        (Get-Content $versionManifestPath) -replace 'PackageVersion: .*', "PackageVersion: $version" | Set-Content $versionManifestPath
-    }
+ManifestVersion: $version

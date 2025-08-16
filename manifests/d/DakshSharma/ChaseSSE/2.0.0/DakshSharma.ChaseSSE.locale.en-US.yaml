@@ -1,5 +1,5 @@
 PackageIdentifier: DakshSharma.ChaseSSE
-PackageVersion: 2.0.0
+PackageVersion: $version
 PackageLocale: en-US
 Publisher: Daksh Sharma
 PublisherUrl: https://dakshsharma.me
@@ -77,14 +77,6 @@ ReleaseNotes: |-
   • Improved CURL implementation with proper headers
   • Better memory management and error handling
   • Enhanced regex patterns for data extraction
-ReleaseNotesUrl: https://github.com/frypan05/chase-sse-dist/releases/tag/v2.0.0
+ReleaseNotesUrl: https://github.com/frypan05/chase-sse-dist/releases/tag/$version
 ManifestType: defaultLocale
-ManifestVersion: 1.4.0
-  | Out-File -FilePath $localeManifestPath -Encoding utf8
-    } else {
-        (Get-Content $localeManifestPath) | ForEach-Object {
-            $_ -replace 'PackageVersion: .*', "PackageVersion: $version" `
-               -replace 'ReleaseNotesUrl: .*', "ReleaseNotesUrl: https://github.com/frypan05/chase-sse-dist/releases/tag/${{ github.ref_name }}" `
-               -replace 'Version .* -', "Version $version -"
-        } | Set-Content $localeManifestPath
-    }
+ManifestVersion: $version
