@@ -1,13 +1,21 @@
 PackageIdentifier: DakshSharma.ChaseSSE
-PackageVersion: 2.0.0
+PackageVersion: $version
 InstallerType: inno
 Installers:
 - Architecture: x64
-  InstallerUrl: https://github.com/frypan05/chase-sse-dist/releases/download/v2.0.0/chase-sse-setup-2.0.0.exe
-  InstallerSha256: AUTO_REPLACED_BY_SCRIPT
+  InstallerUrl: https://github.com/frypan05/chase-sse-dist/releases/download/${{ github.ref_name }}/chase-sse-setup-$version.exe
+  InstallerSha256: ${{ steps.hash.outputs.sha256 }}
   AppsAndFeaturesEntries:
   - DisplayName: Chase SSE
     Publisher: Daksh Sharma
     ProductCode: '{8B5F3D2A-1C4E-4F6B-9A8D-2E5C7F9B1A3D}_is1'
 ManifestType: installer
 ManifestVersion: 1.4.0
+    | Out-File -FilePath $installerManifestPath -Encoding utf8
+    } else {
+        (Get-Content $installerManifestPath) | ForEach-Object {
+            $_ -replace 'PackageVersion: .*', "PackageVersion: $version" `
+               -replace 'InstallerUrl: .*', "InstallerUrl: https://github.com/frypan05/chase-sse-dist/releases/download/${{ github.ref_name }}/chase-sse-setup-$version.exe" `
+               -replace 'InstallerSha256: .*', "InstallerSha256: ${{ steps.hash.outputs.sha256}}"
+        } | Set-Content $installerManifestPath
+    }

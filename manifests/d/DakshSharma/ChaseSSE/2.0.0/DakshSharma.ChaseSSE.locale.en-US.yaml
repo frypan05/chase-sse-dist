@@ -80,3 +80,11 @@ ReleaseNotes: |-
 ReleaseNotesUrl: https://github.com/frypan05/chase-sse-dist/releases/tag/v2.0.0
 ManifestType: defaultLocale
 ManifestVersion: 1.4.0
+  | Out-File -FilePath $localeManifestPath -Encoding utf8
+    } else {
+        (Get-Content $localeManifestPath) | ForEach-Object {
+            $_ -replace 'PackageVersion: .*', "PackageVersion: $version" `
+               -replace 'ReleaseNotesUrl: .*', "ReleaseNotesUrl: https://github.com/frypan05/chase-sse-dist/releases/tag/${{ github.ref_name }}" `
+               -replace 'Version .* -', "Version $version -"
+        } | Set-Content $localeManifestPath
+    }
