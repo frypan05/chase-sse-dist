@@ -1,0 +1,13 @@
+PackageIdentifier: DakshSharma.ChaseSSE
+PackageVersion: $version
+InstallerType: inno
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/frypan05/chase-sse-dist/releases/download/v2.2.0/chase-sse-setup-2.2.0.exe
+  InstallerSha256: 12BB70359378A5B2D6EC54A13D1460ED3B0D17AFAF27576A237A00BE335FACBA
+  AppsAndFeaturesEntries:
+  - DisplayName: Chase SSE
+    Publisher: Daksh Sharma
+    ProductCode: '{8B5F3D2A-1C4E-4F6B-9A8D-2E5C7F9B1A3D}_is1'
+ManifestType: installer
+ManifestVersion: $version
