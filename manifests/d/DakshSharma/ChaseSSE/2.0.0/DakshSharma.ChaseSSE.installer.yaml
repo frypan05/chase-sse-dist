@@ -3,7 +3,7 @@ PackageVersion: 2.0.0
 InstallerType: inno
 Installers:
 - Architecture: x64
-  InstallerUrl: https://github.com/frypan05/chase-sse-dist/releases/download/v2.0.0/chase.exe
+  InstallerUrl: https://github.com/frypan05/chase-sse-dist/releases/download/v2.0.0/chase-sse-setup-2.0.0.exe
   InstallerSha256: AUTO_REPLACED_BY_SCRIPT
   AppsAndFeaturesEntries:
   - DisplayName: Chase SSE
