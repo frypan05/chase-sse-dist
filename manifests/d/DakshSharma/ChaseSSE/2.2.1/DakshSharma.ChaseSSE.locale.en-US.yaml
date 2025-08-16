@@ -1,0 +1,82 @@
+PackageIdentifier: DakshSharma.ChaseSSE
+PackageVersion: $version
+PackageLocale: en-US
+Publisher: Daksh Sharma
+PublisherUrl: https://dakshsharma.me
+PublisherSupportUrl: https://github.com/frypan05/chase-sse/issues
+Author: Daksh Sharma
+PackageName: Chase SSE
+PackageUrl: https://github.com/frypan05/chase-sse-dist
+License: MIT
+LicenseUrl: https://github.com/frypan05/chase-sse-dist/blob/main/LICENSE
+Copyright: Copyright (c) 2024 Daksh Sharma
+CopyrightUrl: https://github.com/frypan05/chase-sse-dist/blob/main/LICENSE
+ShortDescription: Advanced command-line scientific search engine for research paper discovery
+Description: |-
+  Chase SSE is a powerful command-line application designed for researchers, students, and academics who need quick access to scientific literature.
+  
+  Key features include:
+  • Multi-database search across ArXiv, Google Scholar, IEEE Xplore, PubMed, and more
+  • Real-time paper summaries and metadata extraction from ArXiv API
+  • Intelligent caching system for faster subsequent searches
+  • Direct PDF download capabilities with progress tracking
+  • Cross-platform compatibility (Windows, Linux, macOS)
+  • Configurable search parameters and result limits
+  • Clean, intuitive command-line interface with emoji indicators
+  • Local file management capabilities
+  
+  Perfect for literature reviews, research discovery, and academic workflows.
+Moniker: chase-sse
+Tags:
+- research
+- academic
+- papers
+- arxiv
+- scholar
+- scientific
+- literature
+- cli
+- command-line
+- search-engine
+- pdf
+- download
+- bibliography
+- science
+- academic-research
+- paper-search
+- research-tool
+ReleaseNotes: |-
+  Version 2.0.0 - Major Update
+  
+  🎉 NEW FEATURES:
+  • Enhanced ArXiv integration with real-time paper parsing
+  • Multi-database search across 6+ academic platforms
+  • Intelligent caching system for 24-hour result retention
+  • Progress bars for file downloads
+  • Advanced command aliases and shortcuts
+  • Detailed paper summaries with --detailed flag
+  • Statistics and configuration management
+  • Cross-platform directory management
+  
+  🔧 IMPROVEMENTS:
+  • Better error handling and user feedback
+  • Improved XML parsing for ArXiv responses
+  • Enhanced URL validation
+  • Modern CLI interface with emoji indicators
+  • Configurable result limits (1-50 papers)
+  • Automatic directory creation for downloads and cache
+  
+  🐛 BUG FIXES:
+  • Fixed SSL certificate verification issues
+  • Resolved XML parsing errors from ArXiv API
+  • Improved HTTP timeout handling
+  • Better handling of malformed search queries
+  
+  🚀 TECHNICAL UPDATES:
+  • Updated to use nlohmann/json for JSON parsing
+  • Improved CURL implementation with proper headers
+  • Better memory management and error handling
+  • Enhanced regex patterns for data extraction
+ReleaseNotesUrl: https://github.com/frypan05/chase-sse-dist/releases/tag/v2.2.1
+ManifestType: defaultLocale
+ManifestVersion: $version

@@ -1,0 +1,5 @@
+PackageIdentifier: DakshSharma.ChaseSSE
+PackageVersion: $version
+DefaultLocale: en-US
+ManifestType: version
+ManifestVersion: $version
