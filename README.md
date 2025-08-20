@@ -1,5 +1,5 @@
 # chase-sse-dist
-Public Distribution
+Public Distribution Command Line Tool
 
 # 🔍 Chase SSE - Scientific Search Engine CLI
 
